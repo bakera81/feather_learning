@@ -1,0 +1,23 @@
+Collections(NoSQL):
+-courses
+    -banner
+    -title
+    -modules (or separate collections)
+         -comments (docs within modules)
+         -assignments //which students upload to a certain "module"
+-people
+
+
+SQL:
+-Course
+  -title
+  -banner
+
+-person
+  -firstname
+  -lastname
+
+
+-ids
+  -person_id
+  -course_id

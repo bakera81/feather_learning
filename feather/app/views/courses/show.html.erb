@@ -23,8 +23,8 @@
     <!-- Top Bar -->
     <header class="side-header light-skin opened-menu">
         <div class="admin-details">
-            <span><img src="http://placehold.it/896x932" alt="" /></span>
-            <h3>John doe</h3> <i>Student</i>
+            <span><%= image_tag "rick_astley.jpg" %></span>
+            <h3>Rick Astley</h3> <i>Student</i>
             <h5 class="admin-status online">Online</h5>
         </div>
         <div class="menu-scroll">
@@ -59,12 +59,13 @@
                 <div class="col-md-12">
                     <div class="profile-sec">
                         <div class="profile-banner-sec">
-                            <img src="./images/oceanStrip.jpg" alt="" />
+                            <%= image_tag @course.banner %>
                         </div>
                         <div class="user-bar">
-                            <div class="user-thumb"> <img src="./images/davidkhale.jpg" alt="" />
+                            <div class="user-thumb">
+                              <%= image_tag @course.headshot %>
                             </div>
-                            <div> <span><h1>name of course</h1></span> <span><h2>something goes here</h2></span>
+                            <div> <span><h1><%= @course.title %></h1></span> <span><h2>something goes here</h2></span>
                             </div>
                         </div>
                     </div>
