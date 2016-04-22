@@ -1,0 +1,21 @@
+<h1><%= @course.title %></h1>
+<p>
+  <strong>Title:</strong>
+  <%= @course.title %>
+</p>
+
+<p>
+  <strong>Banner:</strong>
+  <%= @course.banner %>
+</p>
+<p>
+  <strong>People:</strong>
+  <%= @people.name %>
+</p>
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Destroy', course_path(@course),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+
+<%= link_to 'Back', courses_path %>

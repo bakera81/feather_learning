@@ -1,0 +1,11 @@
+<h1>New Person</h1>
+
+<%= render 'form' %>
+<table>
+<% @courses.each do |course| %>
+  <tr>
+    <td><%= course.title %></td>
+  </tr>
+  <% end %>
+</table>
+<%= link_to 'Back', people_path %>

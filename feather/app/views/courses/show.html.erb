@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta-Information -->
+    <title>Admin Angular Template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+   </head>
+
+<body>
+    <!-- Toggle Content -->
+    <div class="top-bar">
+        <div class="logo">
+            <a href="index.html" title=""> <i class="fa fa-deviantart"></i> Feather</a>
+            <div class="menu-options">
+                <span class="menu-action"><i></i></span>
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar -->
+    <header class="side-header light-skin opened-menu">
+        <div class="admin-details">
+            <span><img src="http://placehold.it/896x932" alt="" /></span>
+            <h3>John doe</h3> <i>Student</i>
+            <h5 class="admin-status online">Online</h5>
+        </div>
+        <div class="menu-scroll">
+            <div class="side-menus">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#" title=""> <i class="fa fa-home"></i> <span>Home</span></a>
+                        </li>
+                        <li class="menu-item-has-children"><a href="" title=""><i class="fa fa-book"></i><span>Courses</span></a>
+                            <ul>
+                                <li><a href="#" title=""><span>Course_1_goes_here</span> </a></li>
+                                <li><a href="#" title=""><span>Course_2_goes_here</span> </a></li>
+                                <li><a href="#" title=""><span>Course_3_goes_here</span> </a></li>
+                                <li><a href="#" title=""><span>Course_4_goes_here</span> </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" title=""> <i class="fa fa-calendar"></i> <span>Calendar</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- Menu Scroll -->
+    </header>
+    <!-- Header -->
+
+    <div class="main-content">
+        <div class="panel-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="profile-sec">
+                        <div class="profile-banner-sec">
+                            <img src="./images/oceanStrip.jpg" alt="" />
+                        </div>
+                        <div class="user-bar">
+                            <div class="user-thumb"> <img src="./images/davidkhale.jpg" alt="" />
+                            </div>
+                            <div> <span><h1>name of course</h1></span> <span><h2>something goes here</h2></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Profile Sec -->
+            <div class="row">
+                    <div class="col-md-12">
+                        <div class="widget">
+                            <div class="collapse-sec">
+                                <div class="widget-title">
+                                    <h3>Welcome!</h3> <span>This project-based course introduces students to advanced topics in the design and development of technology for education, including design thinking for educators, service and human-centered design practices and web programming for interactive learning applications. The Advanced Design Studio provides an opportunity for students to build on their earlier coursework in educational technology design and development by working as a member of a project development team. Through supervised collaborative work around a single project, students will assume roles in and work through the various stages of a project's life cycle, from problem framing  to solution prototyping. The course focal point, the studio project, will be defined by student teams early in the semester. This course consists of both seminar and technical lab sessions and focuses on application design for both formal and informal educational settings.</span>                                    </div>
+                                <div id="accordion11" class="panel-group">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading gray">
+                                            <h4 class="panel-title"> <a data-target="#collapseOne-l" data-parent="#accordion11" data-toggle="collapse" class="accordion-toggle"> Exploring Design </a></h4> </div>
+                                        <div class="panel-collapse in" id="collapseOne-l" style="height: auto;">
+                                            <div class="panel-body"> In this session we will explore the concept of design in its broadest sense by discussing the relationships between design values, theory, practice, processes and materials. We will also consider common challenges
+                                                to designing and developing educational technology and review a design framework to guide our work in T581.</div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading gray">
+                                            <h4 class="panel-title">
+                                          <a data-target="#collapseTwo-l" data-parent="#accordion11" data-toggle="collapse" class="accordion-toggle collapsed"> Collapsible Group Item #2 </a>
+                                        </h4> </div>
+                                        <div class="panel-collapse collapse" id="collapseTwo-l" style="height: 0px;">
+                                            <div class="panel-body"> Here</div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading gray">
+                                            <h4 class="panel-title">
+                                                        <a data-target="#collapseTwo-l" data-parent="#accordion3" data-toggle="collapse" class="accordion-toggle collapsed"> Collapsible Group Item #2 </a>
+                                                    </h4> </div>
+                                        <div class="panel-collapse collapse" id="collapseTwo-l" style="height: 0px;">
+                                            <div class="panel-body">
+
+                                              <span> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                                                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</span> <span>span two</span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Panel Content -->
+        </div>
+        <!-- Main Content -->
+    <footer>
+        <div class="container">
+            <p>© 2016 Feather. Made with <i class="fa fa-heart"></i> </p>
+            <ul>
+                <li> <a href="#/" title="">Support</a> </li>
+            </ul>
+        </div>
+    </footer>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+</body>
+
+</html>

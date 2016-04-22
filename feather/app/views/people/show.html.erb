@@ -1,0 +1,27 @@
+<h1><%= @person.firstname %></h1>
+<p>
+  <strong>first name:</strong>
+  <%= @person.firstname %>
+</p>
+
+<p>
+  <strong>last name:</strong>
+  <%= @person.lastname %>
+</p>
+
+<p>
+  <strong>role:</strong>
+  <%= @person.role %>
+</p>
+
+<p>
+  <strong>Courses:</strong>
+  <%= @person.courses %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Destroy', person_path(@person),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+
+<%= link_to 'Back', people_path %>

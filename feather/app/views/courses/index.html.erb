@@ -1,0 +1,21 @@
+<h1>Listing All Courses</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Banner</th>
+  </tr>
+
+  <% @course.each do |course| %>
+    <tr>
+      <td><%= course.title %></td>
+      <td><%= course.banner %></td>
+      <td><%= link_to 'Show', course_path(course) %></td>
+      <td><%= link_to 'Edit', edit_course_path(course) %></td>
+      <td><%= link_to 'Destroy', course_path(course),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    </tr>
+  <% end %>
+</table>
