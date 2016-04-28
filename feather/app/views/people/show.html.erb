@@ -16,7 +16,7 @@
 
 <p>
   <strong>Courses:</strong>
-  <%= @person.courses %>
+  <%= @person.courses.map {|c| c.banner}.join(', ') %>
 </p>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |

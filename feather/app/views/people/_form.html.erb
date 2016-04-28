@@ -1,5 +1,14 @@
 <%= form_for @person do |f| %>
 
+     <div class="field">
+        <% for course in Course.all %>
+            <div>
+                <%= check_box_tag "person[course_ids][]", course.id, @person.courses.include?(course) %>
+                <%= course.banner %>
+            </div>
+        <% end %>
+    </div>
+
   <% if @person.errors.any? %>
     <div id="error_explanation">
       <h2>

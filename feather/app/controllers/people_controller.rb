@@ -20,6 +20,7 @@ class PeopleController < ApplicationController
     @person = Person.new(person_params)
 
     if @person.save
+      @person.courses.build
       redirect_to @person
     else
       render 'new'
@@ -30,6 +31,7 @@ class PeopleController < ApplicationController
     @person = Person.find(params[:id])
 
     if @person.update(person_params)
+      @person.courses.build
       redirect_to @person
     else
       render 'edit'
@@ -45,7 +47,7 @@ class PeopleController < ApplicationController
 
   private
     def person_params
-      params.require(:person).permit(:firstname, :lastname, :role, :course_id)
+      params.require(:person).permit(:firstname, :lastname, :role, { course_ids:[] })
     end
 
 
