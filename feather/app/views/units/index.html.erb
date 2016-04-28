@@ -1,0 +1,23 @@
+<h1>Listing All Units</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Course</th>
+  </tr>
+
+  <% @units.each do |unit| %>
+    <tr>
+      <td><%= unit.title %></td>
+      <td><%= unit.content %></td>
+      <td><%= unit.course.title %></td>
+      <td><%= link_to 'Show', unit_path(unit) %></td>
+      <td><%= link_to 'Edit', edit_unit_path(unit) %></td>
+      <td><%= link_to 'Destroy', unit_path(unit),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,18 @@
+<h1><%= @unit.title %></h1>
+<p>
+  <strong>Content</strong>
+  <%= @unit.content %>
+</p>
+
+
+<p>
+  <strong>Course:</strong>
+  <%= @unit.course.title %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Destroy', person_path(@person),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+
+<%= link_to 'Back', people_path %>

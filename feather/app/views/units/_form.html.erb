@@ -1,0 +1,41 @@
+<%= form_for @unit do |f| %>
+
+     <div class="field">
+        <% for unit in Unit.all %>
+            <!-- <div>
+                <%= check_box_tag "unit[course_ids][]", course.id, @person.courses.include?(course) %>
+                <%= course.banner %>
+            </div> -->
+        <% end %>
+    </div>
+
+  <% if @unit.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@unit.errors.count, "error") %> prohibited
+        this course from being saved:
+      </h2>
+      <ul>
+        <% @unit.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </p>
+
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
