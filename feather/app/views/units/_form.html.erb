@@ -1,12 +1,7 @@
 <%= form_for @unit do |f| %>
 
-     <div class="field">
-        <% for unit in Unit.all %>
-            <!-- <div>
-                <%= check_box_tag "unit[course_ids][]", course.id, @person.courses.include?(course) %>
-                <%= course.banner %>
-            </div> -->
-        <% end %>
+   <div class="field">
+        <%=collection_select(:unit, :course, Course.all, :id, :banner)%>
     </div>
 
   <% if @unit.errors.any? %>

@@ -44,7 +44,7 @@ class UnitsController < ApplicationController
 
   private
     def unit_params
-      params.require(:unit).permit(:title, :content)
+      params.require(:unit).permit(:title, :content, :course_id)
     end
   
 end

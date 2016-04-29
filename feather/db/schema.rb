@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 20160428224937) do
   create_table "courses", force: :cascade do |t|
     t.string   "title"
     t.string   "banner"
+    t.string   "headshot"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "headshot"
     t.integer  "unit_id"
   end
 
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20160428224937) do
     t.string   "firstname"
     t.string   "lastname"
     t.string   "role"
+    t.string   "image"
     t.integer  "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -50,15 +51,5 @@ ActiveRecord::Schema.define(version: 20160428224937) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  create_table "users", force: :cascade do |t|
-    t.integer  "cid_id"
-    t.integer  "pid_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "users", ["cid_id"], name: "index_users_on_cid_id"
-  add_index "users", ["pid_id"], name: "index_users_on_pid_id"
 
 end
