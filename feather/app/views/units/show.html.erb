@@ -7,7 +7,9 @@
 
 <p>
   <strong>Course:</strong>
-  <%= @unit.course.title %>
+  <%= @unit.each do |unit| %>
+  <%= unit.course.title %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
