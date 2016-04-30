@@ -1,5 +1,14 @@
 <%= form_for @course do |f| %>
 
+     <div class="field">
+        <% for unit in Unit.all %>
+            <div>
+                <%= check_box_tag "course[unit_ids][]", unit.id, @course.units.include?(unit) %>
+                <%= unit.title %>
+            </div>
+        <% end %>
+    </div>
+
   <% if @course.errors.any? %>
     <div id="error_explanation">
       <h2>

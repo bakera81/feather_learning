@@ -20,6 +20,7 @@ class CoursesController < ApplicationController
     @course = Course.new(course_params)
 
     if @course.save
+      @courses.units.build
       redirect_to @course
     else
       render 'new'
@@ -30,6 +31,7 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
 
     if @course.update(course_params)
+      @courses.units.build
       redirect_to @course
     else
       render 'edit'
@@ -45,6 +47,6 @@ class CoursesController < ApplicationController
 
   private
     def course_params
-      params.require(:course).permit(:title, :banner, :headshot)
+      params.require(:course).permit(:title, :banner, :headshot, { unit_ids:[] })
     end
 end

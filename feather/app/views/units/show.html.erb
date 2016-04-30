@@ -7,14 +7,11 @@
 
 <p>
   <strong>Course:</strong>
-  <%= @unit.each do |unit| %>
-  <%= unit.course.title %>
-  <% end %>
 </p>
 
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Destroy', person_path(@person),
+<%= link_to 'Edit', edit_unit_path(@unit) %> |
+<%= link_to 'Destroy', unit_path(@unit),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
 
-<%= link_to 'Back', people_path %>
+<%= link_to 'Back', units_path %>
