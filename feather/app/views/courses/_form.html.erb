@@ -37,6 +37,13 @@
     <%= f.text_field :headshot %>
   </p>
 
+  <%= f.fields_for :units, @course.units do |f_unit| %>
+        <%= f_unit.label :title%>
+        <%= f_unit.text_field :title%><br>
+        <%= f_unit.label :content%>
+        <%= f_unit.text_field :content%><br>
+  <% end %>
+
   <p>
     <%= f.submit %>
   </p>
