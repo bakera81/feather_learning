@@ -7,6 +7,9 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
     @courses = Course.all
     @people = Course.find(params[:id]).people
+    @array1 = ["collapseOne-l", "collapseTwo-l", "collapseThree-l", "collapseFour-l", "collapseFive-l", "collapseSix-l", "collapseSeven-l"]
+    @array2 = ["#collapseOne-l", "#collapseTwo-l", "#collapseThree-l", "#collapseFour-l", "#collapseFive-l", "#collapseSix-l", "#collapseSeven-l"]
+
   end
 
   def new

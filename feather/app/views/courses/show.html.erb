@@ -78,11 +78,11 @@
               <div class="widget-title">
                 <h3>Welcome!</h3> <span>This project-based course introduces students to advanced topics in the design and development of technology for education, including design thinking for educators, service and human-centered design practices and web programming for interactive learning applications. The Advanced Design Studio provides an opportunity for students to build on their earlier coursework in educational technology design and development by working as a member of a project development team. Through supervised collaborative work around a single project, students will assume roles in and work through the various stages of a project's life cycle, from problem framing  to solution prototyping. The course focal point, the studio project, will be defined by student teams early in the semester. This course consists of both seminar and technical lab sessions and focuses on application design for both formal and informal educational settings.</span>                                    </div>
                 <div id="accordion11" class="panel-group">
-                  <% @course.units.each do |unit| %>
+                  <% @course.units.each_with_index do |unit, i| %>
                   <div class="panel panel-default">
                     <div class="panel-heading gray">
-                      <h4 class="panel-title"> <a data-target="#collapseOne-l" data-parent="#accordion11" data-toggle="collapse" class="accordion-toggle">unit.title</a></h4> </div>
-                      <div class="panel-collapse in" id="collapseOne-l" style="height: auto;">
+                      <h4 class="panel-title"> <a data-target=@array2[i] data-parent="#accordion11" data-toggle="collapse" class="accordion-toggle">unit.title</a></h4> </div>
+                      <div class="panel-collapse in" id=@array1[i] style="height: auto;">
                         <div class="panel-body">unit.content</div>
                       </div>
                     </div>
