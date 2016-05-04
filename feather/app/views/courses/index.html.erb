@@ -1,21 +1,121 @@
-<h1>Listing All Courses</h1>
+<!DOCTYPE html>
+<html>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Banner</th>
-  </tr>
+<head>
+  <!-- Meta-Information -->
+  <title>Admin Angular Template</title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+</head>
 
-  <% @course.each do |course| %>
-    <tr>
-      <td><%= course.title %></td>
-      <td><%= course.banner %></td>
-      <td><%= link_to 'Show', course_path(course) %></td>
-      <td><%= link_to 'Edit', edit_course_path(course) %></td>
-      <td><%= link_to 'Destroy', course_path(course),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    </tr>
-  <% end %>
-</table>
+<body>
+  <!-- Toggle Content -->
+  <div class="top-bar">
+    <div class="logo">
+      <a href="index.html" title=""> <i class="fa fa-deviantart"></i> Feather</a>
+      <div class="menu-options">
+        <span class="menu-action"><i></i></span>
+      </div>
+    </div>
+  </div>
+  <!-- Top Bar -->
+  <header class="side-header light-skin opened-menu">
+    <div class="admin-details">
+      <span><%= image_tag "rick_astley.jpg" %></span>
+      <h3>Rick Astley</h3> <i>Student</i>
+      <h5 class="admin-status online">Online</h5>
+    </div>
+    <div class="menu-scroll">
+      <div class="side-menus">
+        <nav>
+          <ul>
+            <li>
+              <a href="#" title=""> <i class="fa fa-home"></i> <span>Home</span></a>
+            </li>
+            <li class="menu-item-has-children"><a href="" title=""><i class="fa fa-book"></i><span>Courses</span></a>
+              <ul>
+                <% @courses.each do |c| %>
+                <li><a href="#" title=""><span><%= c.title %></span> </a></li>
+                <% end %>
+              </ul>
+            </li>
+            <li>
+              <a href="#" title=""> <i class="fa fa-calendar"></i> <span>Calendar</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Menu Scroll -->
+  </header>
+  <!-- Header -->
+
+  <div class="main-content">
+    <div class="panel-content">
+      <% @courses.each do |c| %>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="profile-sec">
+          <div class="profile-sec">
+            <div class="profile-banner-sec">
+              <!-- <img src="/assets/oceanStrip-d60af651413839947ef0a9aaad1ebb0691c6ffc7b12bcf945ff3c8c8fb0db8f3.jpg" alt="Oceanstrip"> -->
+              <%= image_tag c.banner %>
+              <span><h1><%= c.title %></h1></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <br/>
+    </div>
+    <% end %>
+    <!--<div class="row">
+      <div class="col-md-12">
+        <div class="profile-sec">
+          <div class="profile-sec">
+            <div class="profile-banner-sec">
+              <img src="/assets/oceanStrip-d60af651413839947ef0a9aaad1ebb0691c6ffc7b12bcf945ff3c8c8fb0db8f3.jpg" alt="Oceanstrip">
+              <span><h1>Advanced Design Studio</h1></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <br/>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="profile-sec">
+          <div class="profile-sec">
+            <div class="profile-banner-sec">
+              <img src="/assets/oceanStrip-d60af651413839947ef0a9aaad1ebb0691c6ffc7b12bcf945ff3c8c8fb0db8f3.jpg" alt="Oceanstrip">
+              <span><h1>Advanced Design Studio</h1></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <br/>
+    </div> -->
+  </div>
+  </div>
+
+            <!-- Main Content -->
+            <footer>
+              <div class="container">
+                <p>© 2016 Feather. Made with <i class="fa fa-heart"></i> </p>
+                <ul>
+                  <li> <a href="#/" title="">Support</a> </li>
+                </ul>
+              </div>
+            </footer>
+            <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+          </body>
+
+          </html>
