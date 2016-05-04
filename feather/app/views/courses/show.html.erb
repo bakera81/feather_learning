@@ -3,7 +3,7 @@
 
 <head>
   <!-- Meta-Information -->
-  <title>Admin Angular Template</title>
+  <title>Feather Learning</title>
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
   <!-- Toggle Content -->
   <div class="top-bar">
     <div class="logo">
@@ -40,11 +39,6 @@
                 <% @courses.each do |c| %>
                 <li><a href="#" title=""><span><%= c.title %></span> </a></li>
                 <% end %>
-                
-                <!-- <li><a href="#" title=""><span>Course_1_goes_here</span> </a></li>
-                <li><a href="#" title=""><span>Course_2_goes_here</span> </a></li>
-                <li><a href="#" title=""><span>Course_3_goes_here</span> </a></li>
-                <li><a href="#" title=""><span>Course_4_goes_here</span> </a></li> -->
               </ul>
             </li>
             <li>
@@ -70,7 +64,7 @@
               <div class="user-thumb">
                 <%= image_tag @course.headshot %>
               </div>
-              <div> <span><h1><%= @course.title %></h1></span> <span><h2>something goes here</h2></span>
+              <div> <span><h1><%= @course.title %></h1></span> <span><h2></h2></span> <br /><br />
               </div>
             </div>
           </div>
@@ -87,54 +81,51 @@
                   <% @course.units.each do |unit| %>
                   <div class="panel panel-default">
                     <div class="panel-heading gray">
-                      <h4 class="panel-title"> <a data-target="#collapseOne-l" data-parent="#accordion11" data-toggle="collapse" class="accordion-toggle"><%= unit.title %></a></h4>
-                    </div>
-                    <div class="panel-collapse in" id="collapseOne-l" style="height: auto;">
-                      <div class="panel-body">
-                          <%= unit.content %>
+                      <h4 class="panel-title"> <a data-target="#collapseOne-l" data-parent="#accordion11" data-toggle="collapse" class="accordion-toggle">unit.title</a></h4> </div>
+                      <div class="panel-collapse in" id="collapseOne-l" style="height: auto;">
+                        <div class="panel-body">unit.content</div>
                       </div>
                     </div>
-                  </div>
-                  <% end %>
-                  <!-- <div class="panel panel-default">
+                    <% end %>
+                    <!-- <div class="panel panel-default">
                     <div class="panel-heading gray">
-                      <h4 class="panel-title">
-                        <a data-target="#collapseTwo-l" data-parent="#accordion11" data-toggle="collapse" class="accordion-toggle collapsed"> Collapsible Group Item #2 </a>
-                      </h4> </div>
-                      <div class="panel-collapse collapse" id="collapseTwo-l" style="height: 0px;">
-                        <div class="panel-body"> Here</div>
-                      </div>
-                    </div>
-                    <div class="panel panel-default">
-                      <div class="panel-heading gray">
-                        <h4 class="panel-title">
-                          <a data-target="#collapseTwo-l" data-parent="#accordion3" data-toggle="collapse" class="accordion-toggle collapsed"> Collapsible Group Item #2 </a>
-                        </h4> </div>
-                        <div class="panel-collapse collapse" id="collapseTwo-l" style="height: 0px;">
-                          <div class="panel-body">
-
-                            <span> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                              3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</span> <span>span two</span> </div>
-                            </div>
-                          </div> -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    <h4 class="panel-title">
+                    <a data-target="#collapseTwo-l" data-parent="#accordion11" data-toggle="collapse" class="accordion-toggle collapsed"> Collapsible Group Item #2 </a>
+                  </h4> </div>
+                  <div class="panel-collapse collapse" id="collapseTwo-l" style="height: 0px;">
+                  <div class="panel-body"> Here</div>
                 </div>
               </div>
-              <!-- Panel Content -->
-            </div>
-            <!-- Main Content -->
-            <footer>
-              <div class="container">
-                <p>© 2016 Feather. Made with <i class="fa fa-heart"></i> </p>
-                <ul>
-                  <li> <a href="#/" title="">Support</a> </li>
-                </ul>
-              </div>
-            </footer>
-            <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-          </body>
+              <div class="panel panel-default">
+              <div class="panel-heading gray">
+              <h4 class="panel-title">
+              <a data-target="#collapseTwo-l" data-parent="#accordion3" data-toggle="collapse" class="accordion-toggle collapsed"> Collapsible Group Item #2 </a>
+            </h4> </div>
+            <div class="panel-collapse collapse" id="collapseTwo-l" style="height: 0px;">
+            <div class="panel-body">
 
-          </html>
+            <span> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+            3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</span> <span>span two</span> </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- Panel Content -->
+</div>
+<!-- Main Content -->
+<footer>
+  <div class="container">
+    <p>© 2016 Feather. Made with <i class="fa fa-heart"></i> </p>
+    <ul>
+      <li> <a href="#/" title="">Support</a> </li>
+    </ul>
+  </div>
+</footer>
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+</body>
+
+</html>
