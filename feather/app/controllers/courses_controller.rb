@@ -5,11 +5,13 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
+    @courses = Course.all
     @people = Course.find(params[:id]).people
   end
 
   def new
     @course = Course.new
+    @course.units.new
   end
 
   def edit
@@ -20,6 +22,7 @@ class CoursesController < ApplicationController
     @course = Course.new(course_params)
 
     if @course.save
+      @courses.units.build
       redirect_to @course
     else
       render 'new'
@@ -30,6 +33,7 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
 
     if @course.update(course_params)
+      @course.units.build
       redirect_to @course
     else
       render 'edit'
@@ -45,6 +49,6 @@ class CoursesController < ApplicationController
 
   private
     def course_params
-      params.require(:course).permit(:title, :banner, :headshot)
+      params.require(:course).permit(:title, :banner, :headshot, :units)
     end
 end

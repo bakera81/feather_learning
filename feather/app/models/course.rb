@@ -7,4 +7,6 @@ class Course < ActiveRecord::Base
   #has and belongs to many
   has_and_belongs_to_many :people
   has_many :units
+
+  accepts_nested_attributes_for :units, :allow_destroy => true
 end

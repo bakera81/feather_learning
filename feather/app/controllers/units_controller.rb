@@ -15,11 +15,12 @@ class UnitsController < ApplicationController
     @unit = Unit.find(params[:id])
   end
 
-  def create
-    @unit = Unit.new(unit_params)
 
+ def create
+    @course = Course.find(params[:course_id])
+    @unit = @course.units.create(unit_params)
     if @unit.save
-      redirect_to @unit
+      redirect_to course_path(@course)
     else
       render 'new'
     end
@@ -29,7 +30,8 @@ class UnitsController < ApplicationController
     @unit = Unit.find(params[:id])
 
     if @unit.update(unit_params)
-      redirect_to @course
+      # @unit.course.build
+      redirect_to @unit
     else
       render 'edit'
     end
@@ -44,7 +46,7 @@ class UnitsController < ApplicationController
 
   private
     def unit_params
-      params.require(:unit).permit(:title, :content, :course_id)
+      params.require(:unit).permit(:title, :content)
     end
   
 end

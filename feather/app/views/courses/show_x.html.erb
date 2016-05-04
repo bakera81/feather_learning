@@ -16,8 +16,9 @@
 <p>
   <strong>Units:</strong>
   <% @course.units.each do |unit| %>
-  <%= @unit.title %>
-  <%= @unit.content %>
+  <%= unit.title %>
+  <%= unit.content %>
+  <% end %>
 </p>
 
 
@@ -36,6 +37,8 @@
     <%= f.submit %>
   </p>
 <% end %>
+
+<p>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Destroy', course_path(@course),
