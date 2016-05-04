@@ -429,7 +429,7 @@ header.side-header.light-skin {
     background: #dfe6ec none repeat scroll 0 0;
 }
 .admin-details {
-    background-image: url("http://placehold.it/222x237");
+    /*background-image: url("http://placehold.it/222x237");*/
     background-size: cover;
     display: table;
     float: left;
@@ -670,7 +670,7 @@ header.side-header.light-skin {
 /* Main Content */
 .main-content {
     float: left;
-    padding: 106px 45px 110px 265px;
+    padding: 100px 15px 110px 240px;
     width: 100%;
 
     -webkit-transition:all 0.4s ease 0s;
@@ -787,7 +787,7 @@ header.side-header.light-skin {
 .panel-content {
     float: left;
     margin-top: -26px;
-    padding-top: 50px;
+    /*padding-top: 50px;*/
     width: 100%;
 }
 .panel-content .row {
@@ -1973,12 +1973,13 @@ form.filterform {
     color: #000000;
 }
 footer {
-    background: #ffffff none repeat scroll 0 0;
+    /*background: #ffffff none repeat scroll 0 0;*/
+    /*box-shadow: 0 0 13px rgba(0, 0, 0, 0.13);*/
     bottom: 0;
-    box-shadow: 0 0 13px rgba(0, 0, 0, 0.13);
     left: 0;
     padding: 20px 45px 20px 265px;
-    position: fixed;
+    height:100px;
+    /*position: fixed;*/
 
     -webkit-transition:all 0.4s ease 0s;
     -moz-transition:all 0.4s ease 0s;
@@ -1986,7 +1987,7 @@ footer {
     -o-transition:all 0.4s ease 0s;
     transition:all 0.4s ease 0s;
     width: 100%;
-    z-index: 2147483642;
+    /*z-index: 2147483642;*/
 }
 footer.wide-footer {
     padding-left: 45px;
@@ -12904,8 +12905,16 @@ box-shadow: 0px 0px 5px 0px rgba(31,181,174,1);
     border-radius: 5px 5px 0 0;
 
     float: left;
-    max-width: 100%;
+    width: 100%;
 }
+
+.profile-banner-sec > span {
+  position: absolute;
+  top: 33%;
+  left: 5%;
+  width: 100%;
+}
+
 .user-bar {
     background: #fff none repeat scroll 0 0;
 
@@ -12924,7 +12933,7 @@ box-shadow: 0px 0px 5px 0px rgba(31,181,174,1);
     float: left;
     left: 0;
     position: absolute;
-    top: 50%;
+    top: 40%;
 
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -12942,7 +12951,7 @@ box-shadow: 0px 0px 5px 0px rgba(31,181,174,1);
     -o-border-radius: 50%;
     border-radius: 50%;
     float: left;
-    margin-top: 53px;
+    /*margin-top: 53px;*/
     padding: 0 30px;
     width: 100%;
 }
