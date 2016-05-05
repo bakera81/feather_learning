@@ -14,7 +14,7 @@
   <!-- Toggle Content -->
   <div class="top-bar">
     <div class="logo">
-      <a href="index.html" title=""> <i class="fa fa-deviantart"></i> Feather</a>
+      <a href="/" title=""> <i class="fa fa-deviantart"></i>Feather</a>
       <div class="menu-options">
         <span class="menu-action"><i></i></span>
       </div>
@@ -32,12 +32,12 @@
         <nav>
           <ul>
             <li>
-              <a href="#" title=""> <i class="fa fa-home"></i> <span>Home</span></a>
+              <a href="/" title=""> <i class="fa fa-home"></i> <span>Home</span></a>
             </li>
             <li class="menu-item-has-children"><a href="" title=""><i class="fa fa-book"></i><span>Courses</span></a>
               <ul>
                 <% @courses.each do |c| %>
-                <li><a href="#" title=""><span><%= c.title %></span> </a></li>
+		<li><%= link_to c.title, c %></li>
                 <% end %>
               </ul>
             </li>
@@ -76,14 +76,15 @@
           <div class="widget">
             <div class="collapse-sec">
               <div class="widget-title">
-                <h3>Welcome!</h3> <span>This project-based course introduces students to advanced topics in the design and development of technology for education, including design thinking for educators, service and human-centered design practices and web programming for interactive learning applications. The Advanced Design Studio provides an opportunity for students to build on their earlier coursework in educational technology design and development by working as a member of a project development team. Through supervised collaborative work around a single project, students will assume roles in and work through the various stages of a project's life cycle, from problem framing  to solution prototyping. The course focal point, the studio project, will be defined by student teams early in the semester. This course consists of both seminar and technical lab sessions and focuses on application design for both formal and informal educational settings.</span>                                    </div>
+                <h3>Welcome!</h3> <span>In this course you will learn the basic principles and concepts necessary to understanding the framework behind this generative lens and fully conceptualize the theories of knowledge created throughout the semester. This course is designed to enable all students to actively participate in an equitable and inclusive learning environment while fostering peer based learning through interdisciplinary approaches to understanding. Course work is designed in the project based learning framework and includes learning objectives outlined in the state standards for cross-cutting concepts.</span>
+              </div>
                 <div id="accordion11" class="panel-group">
                   <% @course.units.each_with_index do |unit, i| %>
                   <div class="panel panel-default">
                     <div class="panel-heading gray">
-                      <h4 class="panel-title"> <a data-target=@array2[i] data-parent="#accordion11" data-toggle="collapse" class="accordion-toggle">unit.title</a></h4> </div>
-                      <div class="panel-collapse in" id=@array1[i] style="height: auto;">
-                        <div class="panel-body">unit.content</div>
+                      <h4 class="panel-title"> <a data-target=<%= @array2[i]%> data-parent="#accordion11" data-toggle="collapse" class="accordion-toggle"><%= unit.title %></a></h4> </div>
+                      <div class="panel-collapse in" id=<%= @array1[i] %> style="height: auto;">
+                        <div class="panel-body"><%= unit.content %></div>
                       </div>
                     </div>
                     <% end %>
@@ -121,7 +122,7 @@
   <div class="container">
     <p>© 2016 Feather. Made with <i class="fa fa-heart"></i> </p>
     <ul>
-      <li> <a href="#/" title="">Support</a> </li>
+      <li> <a href="#" title="">Support</a> </li>
     </ul>
   </div>
 </footer>

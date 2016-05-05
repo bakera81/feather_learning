@@ -14,7 +14,7 @@
   <!-- Toggle Content -->
   <div class="top-bar">
     <div class="logo">
-      <a href="index.html" title=""> <i class="fa fa-deviantart"></i> Feather</a>
+      <a href="/" title=""> <i class="fa fa-deviantart"></i>Feather</a>
       <div class="menu-options">
         <span class="menu-action"><i></i></span>
       </div>
@@ -32,12 +32,12 @@
         <nav>
           <ul>
             <li>
-              <a href="#" title=""> <i class="fa fa-home"></i> <span>Home</span></a>
+              <a href="/" title=""> <i class="fa fa-home"></i> <span>Home</span></a>
             </li>
             <li class="menu-item-has-children"><a href="" title=""><i class="fa fa-book"></i><span>Courses</span></a>
               <ul>
                 <% @courses.each do |c| %>
-                <li><a href="#" title=""><span><%= c.title %></span> </a></li>
+                <li><%= link_to c.title, c %></li>
                 <% end %>
               </ul>
             </li>
@@ -63,7 +63,7 @@
             <div class="profile-banner-sec">
               <!-- <img src="/assets/oceanStrip-d60af651413839947ef0a9aaad1ebb0691c6ffc7b12bcf945ff3c8c8fb0db8f3.jpg" alt="Oceanstrip"> -->
               <%= image_tag c.banner %>
-              <span><h1><%= c.title %></h1></span>
+              <span><h1><%= link_to c.title, c %></h1></span>
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@
               <div class="container">
                 <p>© 2016 Feather. Made with <i class="fa fa-heart"></i> </p>
                 <ul>
-                  <li> <a href="#/" title="">Support</a> </li>
+                  <li> <a href="#" title="">Support</a> </li>
                 </ul>
               </div>
             </footer>

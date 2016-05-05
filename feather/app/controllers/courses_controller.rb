@@ -9,7 +9,8 @@ class CoursesController < ApplicationController
     @people = Course.find(params[:id]).people
     @array1 = ["collapseOne-l", "collapseTwo-l", "collapseThree-l", "collapseFour-l", "collapseFive-l", "collapseSix-l", "collapseSeven-l"]
     @array2 = ["#collapseOne-l", "#collapseTwo-l", "#collapseThree-l", "#collapseFour-l", "#collapseFive-l", "#collapseSix-l", "#collapseSeven-l"]
-
+    @id = :id
+    @welcome = ["American Literature and Composition is a study of the major literary topics and themes across the history of the United States from pre-colonial times to present day. Students will focus on the major literary forms of the emerging nation, analyze the literary themes and trends, and research and compose several papers, speeches, and presentations using representative forms of discourse. ", "Anatomy and physiology is a one year course that involves the structure and function of the human body, as it pertains to how the body systems relate to one another in organization, adaptation, and homeostasis.  This course will involve laboratory activities, projects, dissections, textbook material, models, diagrams, journal writings, and clinical studies.  The material learned in this course can be applied to medical field careers, health and fitness careers, and biological research careers.", "This course assumes that the student has demonstrated a solid foundation in algebra. Topics include the relationships between points, lines, and planes; the axiomatic system; logical thinking and proof-writing; measurement, including area and volume; congruency; similarity; two and three dimensional geometric figures; parallel and perpendicular lines; and the coordinate plane. Instruction in this course is designed for college-bound students." ]
   end
 
   def new
